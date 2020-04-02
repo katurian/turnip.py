@@ -1,11 +1,11 @@
 # turnip.py
 PRAW functions that reply to ``x`` number of submissions on https://www.reddit.com/r/acturnips/new/ if the submission's author:
 
-* (a) advertises a buying price over ``x`` bells. 
+* advertises a buying price over ``x`` bells. 
 
 or
 
-* (b) advertises a selling price ``x`` bells.
+* advertises a selling price ``x`` bells.
 
 The bot also allows you to filter submissions by number of minutes since posted.
 
