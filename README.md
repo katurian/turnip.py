@@ -5,7 +5,7 @@ PRAW functions that reply to ``x`` number of submissions on https://www.reddit.c
 
 or
 
-* advertises a selling price ``x`` bells.
+* advertises a selling price under ``x`` bells.
 
 The bot also allows you to filter submissions by number of minutes since posted.
 
