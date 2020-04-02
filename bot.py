@@ -15,8 +15,8 @@ reddit = praw.Reddit(client_id='PFyXXXXXXXXXX',
                      password='KXXXXXXXX')
 
 state = False
+ids=[]
 while state == False:
-    ids=[]
     for submission in reddit.subreddit('acturnips').new(limit=10):
         timestamp = (time.time()-submission.created_utc)/60
         if (timestamp < 15 and timestamp > 2) and "buying" in submission.title and submission.id not in ids and int(re.findall("\d+", submission.title)[0]) > 350:
