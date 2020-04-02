@@ -14,7 +14,7 @@ def reply():
     replies = ["Hey there! I would love an invite. I also tip 15%.", "May I come in? Thank you!! I will happily tip 15%!", "Please invite me if you get a chance! I tip well.", "Looking to sell, thanks.", "Hi! Would love to join!", "Interested in selling!!", "Heyyyy I have an inventory of turnips I need to get rid of! I will share my profits too.", "Thank you for doing this, let me know if I can get an invite.", "Would very much appreciate it if you let me sell."] 
     return replies[random.randint(0, len(replies)-1)]
 
-def eval(postLimit, price, minutesMin, minutesMax)
+def eval(postLimit, price, minutesMin, minutesMax):
   state = False
   ids=[]
   while state == False:
