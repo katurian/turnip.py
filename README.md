@@ -11,5 +11,7 @@ The bot also allows you to filter submissions by number of minutes since posted.
 
 # requirements
 
-the imported libraries in ``setup.py`` + python 3.7 + a client id, client secret, and username/password from reddit: https://github.com/reddit-archive/reddit/wiki/OAuth2
+the imported libraries in ``setup.py`` + python 3.7 + a client id, client secret, and username/password from reddit: https://github.com/reddit-archive/reddit/wiki/OAuth2 
+
+Message genova#7652 on Discord if you have any questions.
 
