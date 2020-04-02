@@ -11,10 +11,10 @@ reddit = praw.Reddit(client_id='PFyJXXXXXXXX',
                      password='XXXXXXX')
 
 def reply():
-    replies = ["Hey there! I would love an invite. I also tip 15%.", "May I come in? Thank you!! I will happily tip 15%!", "Please invite me if you get a chance! I tip well.", "Looking to sell, thanks.", "Hi! Would love to join!", "Interested in selling!!", "Heyyyy I have an inventory of turnips I need to get rid of! I will share my profits too.", "Thank you for doing this, let me know if I can get an invite.", "Would very much appreciate it if you let me sell."] 
+    replies = ["Hey there! I would love an invite.", "May I come in? Thank you!! I will happily tip!", "Please invite me if you get a chance! I tip well.", "Looking for an invite, thanks.", "Hi! Would love to join!", "Interested!!", "I will share some of my profits :).", "Thank you for doing this, let me know if I can get an invite.", "Would very much appreciate it if you invited me."] 
     return replies[random.randint(0, len(replies)-1)]
 
-def eval(postLimit, price, minutesMin, minutesMax):
+def sell(postLimit, price, minutesMin, minutesMax):
   state = False
   ids=[]
   while state == False:
@@ -25,4 +25,17 @@ def eval(postLimit, price, minutesMin, minutesMax):
               ids.append(submission.id)
               sleep(random.randint(6, 10))
           else:
-              sleep(4)
+              sleep(2)
+              
+def buy(postLimit, price, minutesMin, minutesMax):
+  state = False
+  ids=[]
+  while state == False:
+      for submission in reddit.subreddit('acturnips').new(limit=postLimit):
+          timestamp = (time.time()-submission.created_utc)/60
+          if (timestamp < minutesMax and timestamp > minutesMin) and ("selling" in submission.title) and (submission.id not in ids) and (int(re.findall("\d+", submission.title)[0]) < price):
+              submission.reply(reply())
+              ids.append(submission.id)
+              sleep(random.randint(4, 8))
+          else:
+              sleep(2)
