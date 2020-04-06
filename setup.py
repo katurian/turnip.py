@@ -15,6 +15,8 @@ def reply():
     return replies[random.randint(0, len(replies)-1)]
 
 def sell(postLimit, price, minutesMin, minutesMax):
+  print("Working...")
+  print("https://github.com/katurian/turnip.py")
   state = False
   ids=[]
   while state == False:
@@ -28,6 +30,8 @@ def sell(postLimit, price, minutesMin, minutesMax):
               sleep(2)
               
 def buy(postLimit, price, minutesMin, minutesMax):
+  print("Working...")
+  print("https://github.com/katurian/turnip.py")
   state = False
   ids=[]
   while state == False:
